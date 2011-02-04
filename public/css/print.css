@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+html,*{ 
+    margin: 0; 
+    padding: 0;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+
+body {
+    margin: 18px 0 0 0;
+    padding: 0;
+    background: #b2b9c2 url(none) repeat-x 0 -19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    color: #333333;
+}
+
+table {
+    border-collapse:collapse;
+	border-spacing:0;
+}
+
+fieldset,img { 
+    border:0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+
+ol,ul {
+    list-style:none;
+}
+
+caption,th {
+    text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+
+q:before,q:after {
+    content:'';
+}
+
+abbr, acronym { 
+    cursor:help; border-bottom: 1px dotted #808080;
+}
+
+a, a:link, a:visited{
+    color: #369bbd;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: #003448;
+    outline:none; 
+}
+:focus {
+    -moz-outline-style:none;
+} 
+
+table,tr,td{ 
+    border: none; 
+    text-align: left;
+}
+
+strong{
+    font-weight: bold;
+}
+
+/* BASE CLASSES */
+
+.clear { 
+  clear : both;
+}
+.inline-block { 
+  display : inline-block;
+}
+.space5left{
+    margin-left : 5px;
+}
+.pos{ 
+  color :#3c7939;
+}
+.warn{ 
+  color :#ff8400;
+}
+.neg{ 
+  color: #c40900;
+}
+.small{ 
+  font-size: 95%;
+}
+.xsmall{ 
+  font-size: 85%;
+}
+.strong{
+  font-weight: bold;
+}
+.nodisplay, .hidden { 
+  display: none;
+} 
+
+
+
+
+
+.required:after{
+    content: "*";
+    color: #4a5667;
+    font: bold 90% Verdana, Geneva, Tahoma, sans-serif;   
+}
+
+
+
+
+.page{
+    background-color: #fff;
+	width: 20cm;
+	height: 28.7cm;
+	min-height: 28.7cm;
+	margin: 1.5cm auto 1cm auto;
+	padding: 0.5cm 0.5cm; 
+}
+
+.page #ourAddress{
+	margin: 0.1cm 0 0 0;
+	width: 10cm;
+    font: bold 10px Verdana, Geneva, Tahoma, sans-serif;   
+    color: #808080;
+	float: left;
+}
+
+.page #invoiceInfo{
+	width: 10cm;
+    font: 10px Verdana, Geneva, Tahoma, sans-serif;   
+    color: #333;
+	float: left;
+	
+}
+
+.page #invoiceInfo h1{
+	width: 10cm;
+    font: bold 17px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;    
+    color: #333;
+	float: left;
+}
+
+.page #customerAddress{
+	border: 1px solid #efefef;
+	margin: 1.5cm 1.9cm 0 0;
+	padding: 0.1cm 0.1cm 0.4cm 0.1cm;
+	width: 8cm;
+	height: 2.5cm;
+    font: bold 13px Verdana, Geneva, Tahoma, sans-serif;   
+    color: #333;
+	float: right;
+}
+
+.page #invoiceLabel{
+	margin: 0.8cm 0 0 0;
+	padding: 0.1cm;
+    font: 11px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;    
+    color: #333;
+}
+

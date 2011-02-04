@@ -1,0 +1,59 @@
+<?php 
+
+$decorator = array('ViewHelper',
+ 							array( 'Label' , array( 'class' => 'label' )),
+							//'Errors',
+							'Description',
+							array( 'HtmlTag', array( 'tag' => 'p' ))
+						  );
+						  
+$buttonDecorator = array( 'ViewHelper',
+								  array( 'HtmlTag', array( 'tag' => 'p' ))
+						  );
+
+$this->form->clearDecorators();		
+
+$this->form->civilite	->setDecorators($decorator)
+				     	->setLabel('Civilité :');
+$this->form->nom		->setDecorators($decorator)
+						->setLabel('Nom :');
+$this->form->prenom		->setDecorators($decorator)
+				   		->setLabel('Prénom :');				   
+$this->form->email		->setDecorators($decorator)
+				  		->setLabel('Email :');
+$this->form->telephone	->setDecorators($decorator)
+					  	->setLabel('Téléphone :');
+$this->form->send		->setDecorators($buttonDecorator)
+				   		->setLabel( 'Enregistrer' )
+			       		->setAttrib('class' , 'button' );
+
+
+$this->form->addDisplayGroup( array( 'civilite', 
+									 'nom',
+									 'prenom',
+									 'email',
+									 'telephone',
+									),
+							   'identityGroup',
+							   array( 'disableLoadDefaultDecorators' => true )
+							   );
+							   
+$this->form->setDisplayGroupDecorators(array( 'FormElements',
+											  'Fieldset',
+											  array( array( 'outer' => 'HtmlTag' ), 
+											  		 array( 'tag' => 'div', 
+											  				'class' => 'fields')
+														  ),
+											       )
+									   );
+$this->form->identityGroup	->setOrder( 1 )
+		   				  	->setLegend( 'Identité' );
+		   				  	
+$this->form->send->setOrder( 2 );
+
+$this->form->setDecorators( array(  'FormErrors',
+							 		'FormElements',
+							 		'Form' ) 
+						  );
+echo PHP_EOL;		
+echo $this->form;

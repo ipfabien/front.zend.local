@@ -1,0 +1,89 @@
+@charset "utf-8";
+/*
+ * Redéclarations générales
+ */
+html,*{ 
+  margin: 0; 
+  padding: 0;
+  outline: 0;
+}
+
+body {  
+  font-family: verdana, arial, sans-serif; 
+}
+
+#erroWrapper{ 
+  width: 98%;
+  margin: 30px auto;
+
+} 
+
+#erroWrapper h2{ 
+  text-align: center;
+  font: bold 26px "Trebuchet MS", verdana, arial, sans-serif; 
+  color: #c0c0c0;
+  text-shadow: #808080 1px 1px 2px;
+  margin: 10px 0 14px 0;
+}
+
+#erroWrapper h3{ 
+  text-align: center;
+  font: bold 20px "Trebuchet MS", verdana, arial, sans-serif; 
+  color: #333;
+  text-shadow: #808080 1px 1px 2px;
+  margin: 0 0 14px 0;
+}
+
+#erroWrapper h4{ 
+  text-align: center;
+  font:  16px "Trebuchet MS", verdana, arial, sans-serif; 
+  color: #333;
+  text-shadow: #808080 1px 1px 2px;
+  margin: 0 0 14px 0;
+}
+
+#erroWrapper pre.error { 
+  font: 11px  verdana, arial, sans-serif; 
+  line-height: 18px;
+  width: 400px;
+  color :#770107; 
+  background-color : #feedf3; 
+  border : 1px solid #cc6d6d; 
+  padding : 10px;  
+  margin: 0 auto 14px auto; 
+  -moz-border-radius: 5px; 
+  -khtml-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+  border-radius: 5px;
+}
+
+
+#erroWrapper pre.exception{
+  font-size : 11px;
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #c0c0c0;
+  padding : 10px;  
+  margin: 10px 10px 14px 10px; 
+  -moz-border-radius: 5px; 
+  -khtml-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+  border-radius: 5px;
+}
+
+#erroWrapper p{
+  margin: 10px;
+  text-align: center;
+}
+
+#erroWrapper p a.back{
+  font: bold 13px "Trebuchet MS", verdana, arial, sans-serif; 
+}
+
+#erroWrapper p a.back,a.back:link,a.back:visited{ 
+  color: #536884; 
+  text-decoration:underline;
+}
+#erroWrapper p a.back:hover { 
+  text-decoration:none;
+}

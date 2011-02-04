@@ -1,0 +1,26 @@
+<?php 
+
+$this->headScript()->appendFile('/js/jquery.jsonrpc.js');
+
+$script = <<<SCRIPT
+
+$.jsonRPC.setup({
+      endPoint: 'http://front.zend.local/Wsserver/index/jsonrpc',
+      namespace: 'user'
+});
+
+$.jsonRPC.request('testArray', null , {
+      success: function(result) {
+		console.log( result );
+		alert( result.result );
+	  },
+      error: function(result) {
+        alert( 'error' );
+      }
+    });
+
+
+SCRIPT;
+$this->headScript()->appendScript( $script);
+
+?>
