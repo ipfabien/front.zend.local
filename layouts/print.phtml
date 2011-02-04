@@ -1,0 +1,15 @@
+<?php echo $this->Doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base href="<?php echo URL_MAIN_ABS ?>" />
+<?php echo $this->headScript()  . CRLF; ?>
+<link href="/css/print.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="wrapper">
+<?php echo $this->layout()->content; ?>
+<div style="clear: both;">&nbsp;</div>
+</div>
+<?php echo $this->inlineScript()  . CRLF; ?>
+</body>
+</html>

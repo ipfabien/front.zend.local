@@ -1,0 +1,47 @@
+<?php echo $this->Doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base href="<?php echo URL_MAIN_ABS ?>" />
+<?php echo $this->headTitle()   . PHP_EOL; ?>
+<?php echo $this->headMeta()    . PHP_EOL; ?>
+<?php echo $this->headLink()    . PHP_EOL; ?>
+<?php echo $this->headScript()  . PHP_EOL; ?>
+<link rel="icon" type="image/png" href="/favicon.png" />
+<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	
+	<!-- start header -->
+    <div id="header">
+		<div id="menu">
+		<?php echo $this->displayMenu( 'main', $this ) ?>
+		</div>		
+		
+	</div>
+	<!-- end header --> 
+	
+	<!-- start page -->
+	<div id="page">
+	
+		<!-- start content -->
+		<div id="content">
+		    <?php echo $this->displayMessages() ?>
+			<?php echo $this->action( 'login', 'index', 'User'); ?>
+			<?php echo $this->layout()->content; ?>
+			<?php echo $this->displayUserMenu( $this ) ?>
+		</div>
+		<!-- end content -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+	
+	<!-- start footer -->
+	<div id="footer">
+		
+	</div>
+<!-- end footer -->
+</div>
+<?php echo $this->inlineScript()  . PHP_EOL; ?>
+</body>
+</html>
